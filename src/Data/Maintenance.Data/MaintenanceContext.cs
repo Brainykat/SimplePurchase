@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace Maintenance.Data
+{
+    public class MaintenanceContext : DbContext
+    {
+        public MaintenanceContext(DbContextOptions<MaintenanceContext> options) : base(options)
+        {
+        }
+        public DbSet<Bank> Banks { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.HasDefaultSchema("Maintenance");
+        }
+    }
+}
