@@ -1,4 +1,5 @@
-﻿using Accounts.Domain.Entities;
+﻿using Accounts.Data.EntityConfigurations;
+using Accounts.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,6 +18,9 @@ namespace Accounts.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema("Accounts");
+            modelBuilder.ApplyConfiguration(new ChartOfAccountConfig());
+            modelBuilder.ApplyConfiguration(new AccountConfig());
+            modelBuilder.ApplyConfiguration(new WalletConfig());
         }
     }
 }
