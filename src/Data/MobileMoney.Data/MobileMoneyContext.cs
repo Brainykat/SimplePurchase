@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MobileMoney.Data.EntityConfigurations;
 using MobileMoney.Domain.Entities;
 
 namespace MobileMoney.Data
@@ -13,6 +14,7 @@ namespace MobileMoney.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema("MobileMoney");
+            modelBuilder.ApplyConfiguration(new TransactionConfig());
         }
     }
 }

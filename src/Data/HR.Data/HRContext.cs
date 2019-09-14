@@ -1,4 +1,5 @@
-﻿using HR.Domain;
+﻿using HR.Data.EntityConfigurations;
+using HR.Domain;
 using HR.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,6 +19,10 @@ namespace HR.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema("HR");
+            modelBuilder.ApplyConfiguration(new EmployeeConfig());
+            modelBuilder.ApplyConfiguration(new JobTitleConfig());
+            modelBuilder.ApplyConfiguration(new JobTypeConfig());
+            modelBuilder.ApplyConfiguration(new SuffixConfig());
         }
     }
 }

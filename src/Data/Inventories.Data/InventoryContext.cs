@@ -1,4 +1,5 @@
-﻿using Inventory.Domain.Entities;
+﻿using Inventories.Data.EntityConfigurations;
+using Inventory.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -14,6 +15,8 @@ namespace Inventories.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema("Inventory");
+            modelBuilder.ApplyConfiguration(new InventoryConfig());
+            modelBuilder.ApplyConfiguration(new ItemConfig());
         }
     }
 }

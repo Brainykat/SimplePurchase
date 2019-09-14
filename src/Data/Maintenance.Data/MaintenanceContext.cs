@@ -1,4 +1,5 @@
-﻿using Maintenance.Domain.Entities;
+﻿using Maintenance.Data.Configurations;
+using Maintenance.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -14,6 +15,8 @@ namespace Maintenance.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema("Maintenance");
+            modelBuilder.ApplyConfiguration(new BankConfig());
+            modelBuilder.ApplyConfiguration(new BranchConfig());
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Purchase.Data.Configurations;
 using Purchase.Domain.Entities;
 
 namespace Purchase.Data
@@ -14,6 +15,9 @@ namespace Purchase.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema("Purchase");
+            modelBuilder.ApplyConfiguration(new SupplierConfig());
+            modelBuilder.ApplyConfiguration(new ItemConfig());
+            modelBuilder.ApplyConfiguration(new PurchaseConfig());
         }
     }
 }
