@@ -11,6 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Data\Accounts.Data\Accounts.Data.csproj" />
+    <ProjectReference Include="..\..\..\Data\HR.Data\HR.Data.csproj" />
+    <ProjectReference Include="..\..\..\Data\Inventories.Data\Inventories.Data.csproj" />
+    <ProjectReference Include="..\..\..\Data\Maintenance.Data\Maintenance.Data.csproj" />
+    <ProjectReference Include="..\..\..\Data\MobileMoney.Data\MobileMoney.Data.csproj" />
+    <ProjectReference Include="..\..\..\Data\Purchase.Data\Purchase.Data.csproj" />
+    <ProjectReference Include="..\..\..\Data\UserManagemnet.Data\UserManagemnet.Data.csproj" />
     <ProjectReference Include="..\Client\Purchase.UI.Client.csproj" />
     <ProjectReference Include="..\Shared\Purchase.UI.Shared.csproj" />
   </ItemGroup>
