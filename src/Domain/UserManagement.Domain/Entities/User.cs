@@ -15,6 +15,6 @@ namespace UserManagement.Domain.Entities
         public bool DefaultPassChanged { get; set; }
         public DateTime? ExpirelyDate { get; set; }
         public bool IsRevoked { get; set; }
-        public Employee Employee { get; set; }
+        //public Employee Employee { get; set; }
     }
 }
