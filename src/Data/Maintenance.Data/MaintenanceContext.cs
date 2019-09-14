@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Maintenance.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Maintenance.Data
 {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Inventory.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace Inventories.Data
 {
@@ -7,7 +9,7 @@ namespace Inventories.Data
         public InventoryContext(DbContextOptions<InventoryContext> options) : base(options)
         {
         }
-        public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<Inventory.Domain.Entities.Inventory> Inventories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ServiceContracts.External;
+using System;
 
 namespace MoblieMoney.Persistence
 {
-    public class Mpesa
+    public class Mpesa : IMpesa
     {
         //Implementation of your M-Pesa persistence
         //This will be abstracted to your domain

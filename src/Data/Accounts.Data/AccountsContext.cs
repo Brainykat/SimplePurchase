@@ -1,8 +1,6 @@
 ﻿using Accounts.Data.EntityConfigurations;
 using Accounts.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace Accounts.Data
 {

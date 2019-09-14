@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HR.Domain;
+using HR.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace HR.Data
 {

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace UserManagement.Domain.Entities
 {
-    public class User //: IdentityUser
+    public class User : IdentityUser
     {
         public Guid EmployeeId { get; set; }
         public DateTime RegisteredOn { get; set; }
@@ -14,6 +15,6 @@ namespace UserManagement.Domain.Entities
         public bool DefaultPassChanged { get; set; }
         public DateTime? ExpirelyDate { get; set; }
         public bool IsRevoked { get; set; }
-        public User User { get; set; }
+        public Employee Employee { get; set; }
     }
 }

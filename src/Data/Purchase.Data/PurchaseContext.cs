@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Purchase.Domain.Entities;
 
 namespace Purchase.Data
 {
@@ -7,7 +8,7 @@ namespace Purchase.Data
         public PurchaseContext(DbContextOptions<PurchaseContext> options) : base(options)
         {
         }
-        public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<Purchase.Domain.Entities.Purchase> Purchases { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
