@@ -14,7 +14,7 @@ Simple purchase system with a touch of accounts
 
 # Architecture
 Micro services approach sharing the same database but with multiple contexts 
-#Note
-Work in progress
+# Note
+Work in progress 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
